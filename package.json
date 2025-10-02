@@ -1,0 +1,47 @@
+{
+  "name": "delivery-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "volta": {
+    "node": "22.16.0",
+    "npm": "10.9.2"
+  },
+  "scripts": {
+    "start:local": "nest start --watch",
+    "start:prod": "node --enable-source-maps ./dist/main.js",
+    "test": "jest",
+    "build": "nest build",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@nestjs/cli": "11.0.7",
+    "@nestjs/common": "11.1.5",
+    "@nestjs/core": "11.1.5",
+    "@nestjs/platform-express": "11.1.5",
+    "big.js": "7.0.1",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.0",
+    "reflect-metadata": "0.1.13",
+    "rimraf": "6.0.1",
+    "rxjs": "7.8.1",
+    "typescript": "5.4.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "11.1.6",
+    "@types/big.js": "6.2.2",
+    "@types/express": "5.0.3",
+    "@types/jest": "30.0.0",
+    "@types/node": "22.16.0",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "eslint": "8.47.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "jest": "30.2.0",
+    "prettier": "3.0.1",
+    "ts-jest": "29.4.4"
+  }
+}
