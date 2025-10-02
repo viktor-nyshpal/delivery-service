@@ -88,12 +88,32 @@ describe('DeliveryService', () => {
       expect(deliveryService.calculateFee(weight, destination, deliveryType)).toBe(expectedFee);
     });
 
-    it('should return the calculated fee of "108.00"', () => {
-      const weight = '';
+    it('should return the calculated fee of "50.00"', () => {
+      const weight = '2.4';
+      const destination = 'uman';
+      const deliveryType = DeliveryTypeEnum.standard;
+
+      const expectedFee = '50.00';
+
+      expect(deliveryService.calculateFee(weight, destination, deliveryType)).toBe(expectedFee);
+    });
+
+    it('should return the calculated fee of "1080.00"', () => {
+      const weight = '99.8';
+      const destination = 'odessa';
+      const deliveryType = DeliveryTypeEnum.express;
+
+      const expectedFee = '1080.00';
+
+      expect(deliveryService.calculateFee(weight, destination, deliveryType)).toBe(expectedFee);
+    });
+
+    it('should return the calculated fee of "90.00"', () => {
+      const weight = '0.6';
       const destination = 'kyiv';
       const deliveryType = DeliveryTypeEnum.express;
 
-      const expectedFee = '108.00';
+      const expectedFee = '90.00';
 
       expect(deliveryService.calculateFee(weight, destination, deliveryType)).toBe(expectedFee);
     });
